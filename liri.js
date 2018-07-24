@@ -71,10 +71,10 @@ function movieFunc() {
 //Twitter API request Task
 function twitterFunc() {
     var params = { screen_name: 'KingCongWin' };
-    client.get('statuses/user_timeline', params, function (error, tweets, response) {
+    twitterKey.get('statuses/user_timeline', params, function (error, tweets, response) {
         if (!error) {
             for (var i = 0; i < tweets.length; i++) {
-                console.log("Tweet date: " + tweets[i].created_at + "\n" + tweets[i].text);                
+                console.log("Tweet date: " + tweets[i].created_at + "\n\n" + tweets[i].text);                
             }            
         } 
         else {
